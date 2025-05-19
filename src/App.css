@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #010f17;
+  color: #c0d5ea;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+#hi {
+  color: #c0d5ea;
+}
+
+/* Target all scrollbars */
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5em;
+  transition: background 0.3s ease;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
