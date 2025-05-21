@@ -1,6 +1,6 @@
-import { Box, Skeleton, CircularProgress } from "@mui/material";
-import ImageIcon from "@mui/icons-material/Image";
+import { Box } from "@mui/material";
 import PromptBar from "./PromptBar";
+import ImageContainer from "./ImageContainer";
 export default function MainPage() {
   return (
     <Box
@@ -17,41 +17,7 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
-      <Box
-        sx={{
-          height: "70%",
-          width: "70%",
-
-          // boxShadow: "1em 1em 3em rgba(0, 0, 0)", // custom shadow
-          borderRadius: "0.7em", // optional
-          border: "0.1em solid #000000", // ✅ fixed border definition
-
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        {true ? (
-          <ImageIcon
-            sx={{
-              fontSize: "5em",
-              zIndex: 0,
-            }}
-          ></ImageIcon>
-        ) : (
-          <Skeleton
-            variant="rectangular"
-            width={"100%"}
-            height={"100%"}
-            animation="wave"
-            sx={{
-              borderRadius: "0.7em", // round corners
-              backgroundColor: "#0d1117", // background shade
-              opacity: 1, // transparency
-            }}
-          ></Skeleton>
-        )}
-      </Box>
+      <ImageContainer></ImageContainer>
       <PromptBar></PromptBar>
     </Box>
   );
